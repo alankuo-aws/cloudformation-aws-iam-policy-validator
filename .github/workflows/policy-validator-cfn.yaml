@@ -59,7 +59,7 @@ jobs:
       - name: Print the result for CheckAccessNotGranted check
         if: success() || failure()
         run: echo "${{ steps.run-aws-check-access-not-granted.outputs.result }}"
-      # Run CheckNoPublicAccess check
+      # Run CheckNoPublicAccess check.
       - name: Run AWS AccessAnalyzer CheckNoPublicAccess check
         id: run-aws-check-no-public-access
         uses: alankuo-aws/cloudformation-aws-iam-policy-validator@main
