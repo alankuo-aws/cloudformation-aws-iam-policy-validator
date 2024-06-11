@@ -14,7 +14,7 @@ on:
   push:
     branches: [$default-branch, $protected-branches, "test-workflows"]
   pull_request:
-    # The branches below must be a subset of the branches above.
+    # The branches below must be a subset of the branches above
     branches: [$default-branch, "test-workflows"]
 env:
   AWS_ROLE: ${{ secrets.POLICY_VALIDATOR_ROLE }} # set this with the role ARN which has permissions to invoke access-analyzer:ValidatePolicy,access-analyzer:CheckNoNewAccess, access-analyzer:CheckAccessNotGranted and can be used in GitHub actions
